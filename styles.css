@@ -135,7 +135,7 @@ main { overflow: hidden; }
 
 .hero {
   width: min(calc(100% - 4rem), var(--content));
-  min-height: 43rem;
+  min-height: 38rem;
   margin: 0 auto;
   padding: clamp(4.5rem, 8vw, 8rem) 0 4.5rem;
   display: grid;
@@ -161,12 +161,12 @@ main { overflow: hidden; }
 .hero h1 {
   grid-column: 1 / 10;
   margin: 0;
-  max-width: 14ch;
+  max-width: 17ch;
   font-family: var(--display);
-  font-size: clamp(4.4rem, 7vw, 7.2rem);
+  font-size: clamp(3.2rem, 5vw, 4.6rem);
   font-weight: 720;
-  letter-spacing: -0.058em;
-  line-height: 0.91;
+  letter-spacing: -0.045em;
+  line-height: 0.96;
 }
 
 .hero h1 span {
@@ -180,7 +180,7 @@ main { overflow: hidden; }
   padding-left: 1.5rem;
   border-left: 3px solid var(--signal);
   font-family: var(--display);
-  font-size: clamp(1.35rem, 2.1vw, 1.85rem);
+  font-size: clamp(1.15rem, 1.55vw, 1.45rem);
   font-weight: 520;
   letter-spacing: -0.025em;
   line-height: 1.32;
@@ -257,13 +257,13 @@ main { overflow: hidden; }
 }
 
 .section h2 {
-  max-width: 18ch;
+  max-width: 20ch;
   margin: 0;
   font-family: var(--display);
-  font-size: clamp(2.55rem, 5vw, 4.9rem);
+  font-size: clamp(1.75rem, 3.1vw, 2.9rem);
   font-weight: 720;
-  letter-spacing: -0.05em;
-  line-height: 0.98;
+  letter-spacing: -0.04em;
+  line-height: 1.04;
 }
 
 .impact {
@@ -277,7 +277,7 @@ main { overflow: hidden; }
 
 .impact .section-kicker { color: var(--signal); }
 
-.impact h2 { max-width: 12ch; }
+.impact h2 { max-width: 14ch; }
 
 .impact-grid {
   margin-top: 4rem;
@@ -301,10 +301,10 @@ main { overflow: hidden; }
   display: block;
   color: var(--signal);
   font-family: var(--display);
-  font-size: clamp(1.8rem, 2.5vw, 2.8rem);
+  font-size: clamp(1.55rem, 2.05vw, 2.05rem);
   font-weight: 680;
-  letter-spacing: -0.045em;
-  line-height: 1.05;
+  letter-spacing: -0.04em;
+  line-height: 1.12;
 }
 
 .impact-grid p {
@@ -355,10 +355,10 @@ main { overflow: hidden; }
 .experience-item h3 {
   margin: 0;
   font-family: var(--display);
-  font-size: clamp(1.4rem, 2.3vw, 2.05rem);
+  font-size: clamp(1.2rem, 1.7vw, 1.55rem);
   font-weight: 720;
-  letter-spacing: -0.035em;
-  line-height: 1.1;
+  letter-spacing: -0.03em;
+  line-height: 1.18;
 }
 
 .experience-item header > p:last-child {
@@ -424,15 +424,35 @@ main { overflow: hidden; }
 .credentials h3 {
   margin: 0;
   font-family: var(--display);
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   letter-spacing: -0.02em;
-  line-height: 1.2;
+  line-height: 1.25;
 }
 
 .expertise-grid p {
   margin: 1rem 0 0;
   color: var(--muted);
   font-size: 1rem;
+}
+
+.expertise-grid .practice-block {
+  grid-column: 1 / -1;
+  padding: 1.6rem 1.75rem 1.8rem;
+  background: var(--surface);
+  border-left: 4px solid var(--signal);
+}
+
+.practice-block p:first-of-type {
+  margin-top: 0.75rem;
+  color: var(--technical-blue);
+  font-size: 1.05rem;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+}
+
+.practice-block p:last-of-type {
+  margin-top: 0.5rem;
+  max-width: 62ch;
 }
 
 .credentials {
@@ -541,7 +561,10 @@ footer a { color: var(--ivory); }
     grid-column: 1;
   }
 
-  .hero h1 { font-size: clamp(2.5rem, 13vw, 4.3rem); }
+  .hero h1 {
+    max-width: none;
+    font-size: clamp(2.1rem, 9vw, 3.2rem);
+  }
 
   .hero-statement {
     margin: 2.5rem 0 0;
