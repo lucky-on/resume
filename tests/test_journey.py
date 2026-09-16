@@ -86,15 +86,25 @@ class JourneyPageTests(unittest.TestCase):
         for path in (ROOT / "assets" / "journey").iterdir():
             self.assertLess(path.stat().st_size, 450_000, path.name)
 
-    def test_route_and_skills_grid_are_present(self):
+    def test_timeline_and_skills_grid_are_present(self):
         for value in (
-            'class="systems-path route"',
-            'class="years-bar-track"',
-            'class="skills-grid reveal"',
+            'class="timeline"',
+            'class="timeline-now"',
+            'class="timeline-start"',
+            'class="chapter-marker"',
+            'class="skills-grid"',
             'data-level="started"',
             'data-level="deepened"',
         ):
             self.assertIn(value, self.source)
+        self.assertEqual(self.source.count('class="chapter-marker"'), len(CITIES))
+        self.assertIn(".timeline::before", self.css)
+
+    def test_timeline_runs_newest_first(self):
+        positions = [self.source.index(f'id="{city}"') for city in ("boston", "gdansk", "suwon", "tomsk")]
+        self.assertEqual(positions, sorted(positions))
+        rows = re.findall(r'<th scope="row">(\w+)', self.source)
+        self.assertEqual(rows, ["Boston", "Gdańsk", "Suwon", "Tomsk"])
 
     def test_resume_links_back_and_forth(self):
         self.assertIn('href="../"', self.source)
