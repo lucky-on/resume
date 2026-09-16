@@ -1,0 +1,236 @@
+/* Journey page. Shares ../styles.css; this file only adds what the page needs. */
+
+.nav-links a[aria-current="page"] { color: var(--signal); }
+
+.journey-hero {
+  min-height: auto;
+  padding-bottom: 4rem;
+}
+
+.journey-hero h1 { max-width: 24ch; }
+
+.journey-hero .hero-statement { margin-top: 1.5rem; }
+
+.years-bar {
+  grid-column: 1 / -1;
+  margin-top: 4rem;
+}
+
+.years-bar-track {
+  display: grid;
+  grid-template-columns: 5.3fr 9.5fr 2.3fr 9.2fr;
+  gap: 3px;
+  height: 6px;
+}
+
+.years-bar-track span { background: var(--technical-blue); }
+
+.years-bar-track span:nth-child(even) { background: var(--signal); }
+
+.years-ticks {
+  position: relative;
+  height: 1.3rem;
+  margin-top: 0.45rem;
+  color: var(--muted);
+  font-family: var(--mono);
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.years-ticks span {
+  position: absolute;
+  transform: translateX(-50%);
+}
+
+.years-ticks span:first-child { transform: none; }
+
+.years-ticks span:last-child { transform: translateX(-100%); }
+
+.journey-hero .route { margin-top: 2.5rem; }
+
+.route a { text-decoration: none; }
+
+.route a:hover { text-decoration: underline; }
+
+.route-meta {
+  display: block;
+  margin-top: 0.4rem;
+  color: var(--muted);
+  font-size: 0.68rem;
+  font-weight: 400;
+  letter-spacing: 0.04em;
+}
+
+.chapter {
+  padding: 3.5rem 0 4rem;
+  border-top: 1px solid var(--line);
+}
+
+.chapter-figure { margin: 0 0 2.5rem; }
+
+.chapter-figure img {
+  display: block;
+  width: 100%;
+  height: auto;
+  background: var(--line);
+}
+
+.chapter-figure figcaption {
+  margin-top: 0.75rem;
+  padding-top: 0.6rem;
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  font-family: var(--mono);
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.chapter-body {
+  display: grid;
+  grid-template-columns: minmax(15rem, 0.75fr) 1.55fr;
+  gap: clamp(2rem, 6vw, 6rem);
+}
+
+.chapter-body h2 { max-width: none; }
+
+.chapter-role {
+  margin: 1rem 0 0;
+  color: var(--muted);
+  line-height: 1.5;
+}
+
+.chapter-notes h3 {
+  margin: 0;
+  font-family: var(--display);
+  font-size: 1.05rem;
+  letter-spacing: -0.01em;
+  line-height: 1.3;
+}
+
+.chapter-notes h3 + p { margin: 0.5rem 0 1.75rem; }
+
+.chapter-notes p:last-child { margin-bottom: 0; }
+
+.placeholder {
+  padding-left: 1rem;
+  border-left: 2px dashed var(--line);
+  color: var(--muted);
+}
+
+.skills {
+  padding-top: clamp(3.5rem, 6vw, 5rem);
+  border-top: 1px solid var(--line);
+}
+
+.skills > h2 { margin-bottom: 2.5rem; }
+
+.skills-grid {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+
+.skills-grid th,
+.skills-grid td {
+  padding: 0.85rem 0;
+  border-top: 1px solid var(--line);
+  text-align: left;
+  vertical-align: middle;
+}
+
+.skills-grid thead th {
+  padding-top: 0;
+  border-top: 0;
+  color: var(--technical-blue);
+  font-family: var(--mono);
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.skills-grid tbody th {
+  width: 40%;
+  padding-right: 1rem;
+  font-weight: 500;
+}
+
+.skills-grid thead th:not(:first-child),
+.skills-grid td { text-align: center; }
+
+.skills-grid td[data-level]::before,
+.skills-legend span::before {
+  content: "";
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  box-sizing: border-box;
+  border: 2px solid var(--technical-blue);
+  border-radius: 50%;
+  vertical-align: middle;
+}
+
+.skills-grid td[data-level="deepened"]::before,
+.legend-deepened::before {
+  background: var(--signal);
+  border-color: var(--signal);
+}
+
+.skills-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.75rem;
+  margin: 1.25rem 0 0;
+  color: var(--muted);
+  font-family: var(--mono);
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.skills-legend span::before { margin-right: 0.5rem; }
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+@media (max-width: 760px) {
+  .journey-hero { padding-bottom: 3rem; }
+
+  .years-bar { margin-top: 3rem; }
+
+  .journey-hero .route { margin-top: 2.5rem; }
+
+  .route-meta { font-size: 0.64rem; }
+
+  .chapter { padding: 2.75rem 0 3rem; }
+
+  .chapter-figure { margin-bottom: 1.75rem; }
+
+  .chapter-body {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .skills-grid tbody th {
+    width: 34%;
+    font-size: 0.9rem;
+  }
+
+  .skills-grid thead th { font-size: 0.62rem; }
+}
+
+@media print {
+  .placeholder { border-color: #000; }
+}
