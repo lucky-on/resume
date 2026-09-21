@@ -128,19 +128,83 @@
   line-height: 1.5;
 }
 
-.chapter-figure { margin: 2rem 0 0; }
+.chapter-figure { margin: 2.5rem 0 0; }
 
+/* Feather every edge into the page. The horizontal and vertical fades use
+   different percentages so the softened band is the same width in pixels on
+   a 3:2 image. */
 .chapter-figure img {
   display: block;
   width: 100%;
   height: auto;
-  background: var(--line);
+  -webkit-mask-image:
+    linear-gradient(to right,
+      transparent 0%,
+      rgba(0,0,0,0.04) 2.64%,
+      rgba(0,0,0,0.18) 5.04%,
+      rgba(0,0,0,0.45) 7.2%,
+      rgba(0,0,0,0.76) 9.36%,
+      rgba(0,0,0,0.93) 10.8%,
+      #000 12%,
+      #000 88%,
+      rgba(0,0,0,0.93) 89.2%,
+      rgba(0,0,0,0.76) 90.64%,
+      rgba(0,0,0,0.45) 92.8%,
+      rgba(0,0,0,0.18) 94.96%,
+      rgba(0,0,0,0.04) 97.36%,
+      transparent 100%),
+    linear-gradient(to bottom,
+      transparent 0%,
+      rgba(0,0,0,0.04) 3.96%,
+      rgba(0,0,0,0.18) 7.56%,
+      rgba(0,0,0,0.45) 10.8%,
+      rgba(0,0,0,0.76) 14.04%,
+      rgba(0,0,0,0.93) 16.2%,
+      #000 18%,
+      #000 82%,
+      rgba(0,0,0,0.93) 83.8%,
+      rgba(0,0,0,0.76) 85.96%,
+      rgba(0,0,0,0.45) 89.2%,
+      rgba(0,0,0,0.18) 92.44%,
+      rgba(0,0,0,0.04) 96.04%,
+      transparent 100%);
+  -webkit-mask-composite: source-in;
+  mask-image:
+    linear-gradient(to right,
+      transparent 0%,
+      rgba(0,0,0,0.04) 2.64%,
+      rgba(0,0,0,0.18) 5.04%,
+      rgba(0,0,0,0.45) 7.2%,
+      rgba(0,0,0,0.76) 9.36%,
+      rgba(0,0,0,0.93) 10.8%,
+      #000 12%,
+      #000 88%,
+      rgba(0,0,0,0.93) 89.2%,
+      rgba(0,0,0,0.76) 90.64%,
+      rgba(0,0,0,0.45) 92.8%,
+      rgba(0,0,0,0.18) 94.96%,
+      rgba(0,0,0,0.04) 97.36%,
+      transparent 100%),
+    linear-gradient(to bottom,
+      transparent 0%,
+      rgba(0,0,0,0.04) 3.96%,
+      rgba(0,0,0,0.18) 7.56%,
+      rgba(0,0,0,0.45) 10.8%,
+      rgba(0,0,0,0.76) 14.04%,
+      rgba(0,0,0,0.93) 16.2%,
+      #000 18%,
+      #000 82%,
+      rgba(0,0,0,0.93) 83.8%,
+      rgba(0,0,0,0.76) 85.96%,
+      rgba(0,0,0,0.45) 89.2%,
+      rgba(0,0,0,0.18) 92.44%,
+      rgba(0,0,0,0.04) 96.04%,
+      transparent 100%);
+  mask-composite: intersect;
 }
 
 .chapter-figure figcaption {
-  margin-top: 0.75rem;
-  padding-top: 0.6rem;
-  border-top: 1px solid var(--line);
+  margin-top: 0.35rem;
   color: var(--muted);
   font-family: var(--mono);
   font-size: 0.7rem;
@@ -326,4 +390,9 @@
   .placeholder { border-color: #000; }
 
   .table-scroll { overflow: visible; }
+
+  .chapter-figure img {
+    -webkit-mask-image: none;
+    mask-image: none;
+  }
 }

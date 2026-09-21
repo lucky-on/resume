@@ -106,6 +106,13 @@ class JourneyPageTests(unittest.TestCase):
         rows = re.findall(r'<th scope="row">(\w+)', self.source)
         self.assertEqual(rows, ["Boston", "Gdańsk", "Suwon", "Tomsk"])
 
+    def test_illustrations_are_feathered_into_the_page(self):
+        for prefix in ("-webkit-mask-image", "mask-image"):
+            self.assertIn(f"{prefix}:", self.css)
+        self.assertIn("-webkit-mask-composite: source-in", self.css)
+        self.assertIn("mask-composite: intersect", self.css)
+        self.assertNotIn("border: ", self.css.split(".chapter-figure img")[1].split("}")[0])
+
     def test_resume_links_back_and_forth(self):
         self.assertIn('href="../"', self.source)
         self.assertIn('href="../assets/Sergey_Didenko_Resume.pdf"', self.source)
