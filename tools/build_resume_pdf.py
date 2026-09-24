@@ -171,8 +171,8 @@ def build_pdf(output_path: Path) -> None:
             ),
             Paragraph("LEADERSHIP &amp; TECHNICAL HIGHLIGHTS", styles["section"]),
             bullet("Led and mentored engineering teams across the US, Europe, and Asia, including a six-engineer Amazon ASR core team and current process leadership with 10+ engineers.", styles),
-            bullet("Built a configurable C++ data-processing framework adopted by 11 Alexa engines across edge and cloud, accelerating new ASR-engine prototypes from 4-6 months to 3-4 weeks.", styles),
-            bullet("Led four concurrent regulated medical-device programs and transitioned critical capability in-house for two projects through vendor coordination and knowledge-transfer.", styles),
+            bullet("Designed and implemented the configurable C++ data-processing framework adopted by 11 Alexa engines across edge and cloud, cutting idea-to-production time for a new engine from 4-6 months to 3-4 weeks.", styles),
+            bullet("Led four concurrent regulated medical-device programs while modernizing how the software was built, and transitioned critical capability in-house for two projects through vendor coordination and knowledge-transfer.", styles),
             bullet("Established AI-assisted development and verification practices spanning embedded firmware, mobile, backend, integration, release, and real-hardware testing.", styles),
             Paragraph("CORE EXPERTISE", styles["section"]),
             Paragraph(
@@ -240,7 +240,7 @@ def build_pdf(output_path: Path) -> None:
             "Designed and implemented a configurable C++ data-processing framework adopted by 11 Alexa engines from tiny single-core devices to multi-core cloud machines, improving onboarding and time to production by 4-5x.",
             "Drove modularization of a monolith with 60+ libraries, 50+ binaries, less than 40% coverage, and 50+ annual contributors; achieved 95%+ coverage on decoupled modules with clearer dependencies and reduced blast radius.",
             "Created documentation, templates, release patterns, and migration paths that improved usability, cross-team adoption, and framework scalability across the Alexa ecosystem.",
-            "Reduced ASR-engine prototyping from 4-6 months to 3-4 weeks, simplified monitoring and debugging, led root-cause analysis for complex distributed failures, and drove security certification for 30+ components.",
+            "Reduced idea-to-production time for a new ASR engine from 4-6 months to 3-4 weeks, simplified monitoring and debugging, led root-cause analysis for complex distributed failures, and drove security certification for 30+ components.",
         ],
         styles,
     )

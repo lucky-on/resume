@@ -39,7 +39,7 @@ class ResumeSiteTests(unittest.TestCase):
             "11 Alexa engines",
             "4–6 months",
             "3–4 weeks",
-            "4 medical-device programs",
+            "4 device programs",
         ):
             self.assertIn(value, self.text)
 
@@ -59,6 +59,14 @@ class ResumeSiteTests(unittest.TestCase):
             "Doctor of Philosophy (Ph.D.) in Computer Science",
         ):
             self.assertIn(value, self.source)
+
+    def test_impact_claims_stay_owned_and_specific(self):
+        for value in (
+            "Designed and implemented the C++ data-processing framework",
+            "Idea to production for a new Alexa engine",
+            "Modernizing how regulated medical-device software gets built",
+        ):
+            self.assertIn(value, self.text)
 
     def test_engineering_practices_are_explicit(self):
         for value in (
