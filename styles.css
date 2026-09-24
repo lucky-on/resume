@@ -435,25 +435,7 @@ main { overflow: hidden; }
   font-size: 1rem;
 }
 
-.expertise-grid .practice-block {
-  grid-column: 1 / -1;
-  padding: 1.6rem 1.75rem 1.8rem;
-  background: var(--surface);
-  border-left: 4px solid var(--signal);
-}
-
-.practice-block p:first-of-type {
-  margin-top: 0.75rem;
-  color: var(--technical-blue);
-  font-size: 1.05rem;
-  font-weight: 700;
-  letter-spacing: 0.01em;
-}
-
-.practice-block p:last-of-type {
-  margin-top: 0.5rem;
-  max-width: 62ch;
-}
+.expertise-grid .practice-block { grid-column: 1 / -1; }
 
 .credentials {
   margin-top: 5rem;
