@@ -39,7 +39,7 @@ class ResumeSiteTests(unittest.TestCase):
             "11 Alexa engines",
             "4–6 months",
             "3–4 weeks",
-            "4 device programs",
+            "Multiple device programs",
         ):
             self.assertIn(value, self.text)
 
