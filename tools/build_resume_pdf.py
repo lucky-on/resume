@@ -172,7 +172,7 @@ def build_pdf(output_path: Path) -> None:
             Paragraph("LEADERSHIP &amp; TECHNICAL HIGHLIGHTS", styles["section"]),
             bullet("Led and mentored engineering teams across the US, Europe, and Asia, including a six-engineer Amazon ASR core team and current process leadership with 10+ engineers.", styles),
             bullet("Designed and implemented the configurable C++ data-processing framework adopted by 11 Alexa engines across edge and cloud, cutting idea-to-production time for a new engine from 4-6 months to 3-4 weeks.", styles),
-            bullet("Led four concurrent regulated medical-device programs while modernizing how the software was built, and transitioned critical capability in-house for two projects through vendor coordination and knowledge-transfer.", styles),
+            bullet("Led multiple concurrent regulated medical-device programs while modernizing how the software was built, and transitioned critical capability in-house for two projects through vendor coordination and knowledge-transfer.", styles),
             bullet("Established AI-assisted development and verification practices spanning embedded firmware, mobile, backend, integration, release, and real-hardware testing.", styles),
             Paragraph("CORE EXPERTISE", styles["section"]),
             Paragraph(
@@ -206,7 +206,7 @@ def build_pdf(output_path: Path) -> None:
         story,
         "Olympus Corporation of the Americas | Sr. Principal Software Engineer | Jul 2023-May 2026",
         [
-            "Led software engineering across four regulated medical-device programs spanning embedded connectivity, Linux platforms, video processing using i.MX8M and Cortex-M4/M7, and STM32/ThreadX fluid-control subsystems.",
+            "Led software engineering across multiple regulated medical-device programs spanning embedded connectivity, Linux platforms, video processing using i.MX8M and Cortex-M4/M7, and STM32/ThreadX fluid-control subsystems.",
             "Translated system needs into software requirements, subsystem architecture, HW/SW partitioning, interfaces, and integration strategies with systems, hardware, QA/RA, operations, and manufacturing teams.",
             "Led verification and validation activities including protocol creation, results review, traceability improvements, and release readiness under IEC 62304 Class B/C processes.",
             "Managed external partners through late-phase delivery and knowledge-transfer, eliminating external-vendor reliance for two projects and establishing durable in-house ownership.",

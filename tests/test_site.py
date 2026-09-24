@@ -39,7 +39,7 @@ class ResumeSiteTests(unittest.TestCase):
             "11 Alexa engines",
             "4–6 months",
             "3–4 weeks",
-            "Multiple device programs",
+            "Multiple medical-device programs",
         ):
             self.assertIn(value, self.text)
 
@@ -64,7 +64,7 @@ class ResumeSiteTests(unittest.TestCase):
         for value in (
             "Designed and implemented the C++ data-processing framework",
             "Idea to production for a new Alexa engine",
-            "Modernizing how regulated medical-device software gets built",
+            "Modernizing how regulated software gets built",
         ):
             self.assertIn(value, self.text)
 
