@@ -93,7 +93,10 @@ class ResumePdfTests(unittest.TestCase):
         for value in (
             "Wrote the complete device firmware from scratch in C and C++",
             "RTOS threading model, task priorities",
-            "six peripherals on a shared I2C bus",
+            "five devices on a shared I2C bus",
+            "AHT20",
+            "INA3221",
+            "DS3231",
             "JTAG/SWD alongside the hardware engineer",
             "OTA firmware-update path end to end",
             "high-volume manufacturing",

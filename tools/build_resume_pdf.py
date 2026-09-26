@@ -195,7 +195,7 @@ ROLES = [
         "GloMove | Founder &amp; Chief Systems Architect, personal venture built evenings and weekends | Dec 2021-Aug 2023",
         [
             ("Wrote the complete device firmware from scratch in C and C++ for an ESP32/ESP32-S3 connected lighting platform, owning the architecture, RTOS threading model, task priorities, sensor handling, wire protocols, and lighting effects across power-unit and light devices.", BOTH),
-            ("Integrated six peripherals on a shared I2C bus including a real-time clock and power meters, drove the RS-485 link between power units and lights, and programmed and debugged custom PCBAs over JTAG/SWD alongside the hardware engineer.", BOTH),
+            ("Integrated five devices on a shared I2C bus - an AHT20 temperature/humidity sensor, two INA3221 power monitors, and a DS3231 battery-backed RTC with its AT24C32 EEPROM - drove the RS-485 link between power units and lights, and programmed and debugged custom PCBAs over JTAG/SWD alongside the hardware engineer.", BOTH),
             ("Built the OTA firmware-update path end to end, and implemented BLE provisioning to pair power units with the mobile app before consolidating on Wi-Fi-only provisioning.", BOTH),
             ("Defined end-to-end architecture for the distributed platform using custom PCBAs, motion, ambient-light and capacitive-touch sensing, RF remote control, MQTT cloud connectivity with a telemetry dashboard, and mobile-connected control.", BOTH),
             ("Built and led a cross-functional team of hardware, embedded-software, and backend engineers across architecture, prototyping, manufacturing strategy, and supplier selection.", BOTH),
