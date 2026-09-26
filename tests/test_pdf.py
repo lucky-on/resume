@@ -76,15 +76,12 @@ class ResumePdfTests(unittest.TestCase):
         for value in (
             "protocol creation",
             "knowledge-transfer",
-            "documentation, templates, release patterns, and migration paths",
             "root-cause analysis",
             "monitoring and debugging",
             "time and resource planning",
             "Software Architecture Lab",
             "Scan to Email",
-            "TIFF, BMP, JPEG, GIF, PNG, and PDF",
             "Immediate and On-Demand Image Overwriting",
-            "Kindle Bird's Eye View",
             "MapInfo",
         ):
             self.assertIn(value, self.normalized_text)
@@ -101,6 +98,7 @@ class ResumePdfTests(unittest.TestCase):
             "OTA firmware-update path end to end",
             "high-volume manufacturing",
             "CAN bus control of motors and actuators",
+            "Write C++ against Airway device hardware",
         ):
             self.assertIn(value, self.normalized_text)
 

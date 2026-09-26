@@ -159,6 +159,8 @@ EXPERTISE = (
     "<br/>Medical and leadership: IEC 62304 Class B/C, ISO 13485, ISO 14971, IEC 60601, design controls, V&amp;V, team leadership, mentoring, vendor management, recruiting, AI-assisted development"
 )
 
+VERATHON_HANDS_ON = "Write C++ against Airway device hardware, keeping device-interface layers modular, unit-testable, and maintainable under the portfolio's architecture standards."
+
 # Each role is (heading, [(bullet, variants) ...]). BOTH means it appears in every variant.
 BOTH = (GENERAL, HAYWARD)
 
@@ -166,7 +168,10 @@ ROLES = [
     (
         "Verathon | Senior Software Engineer | Jul 2026-Present",
         [
+            # Leads in the targeted variant, where current hands-on work matters most.
+            (VERATHON_HANDS_ON, (HAYWARD,)),
             ("Drive adoption of software-development best practices across the Airway device portfolio and 200+ repositories, including SOLID design principles, Clean Code, and Clean Architecture.", BOTH),
+            (VERATHON_HANDS_ON, (GENERAL,)),
             ("Establish scalable development and verification processes with a 10+ engineer team, introducing a structured Agile/Kanban cadence, and lead adoption of AI-assisted engineering.", BOTH),
             ("Streamline production-grade internal tools in close collaboration with IT, aligning engineering workflows with enterprise systems and support requirements.", BOTH),
         ],
@@ -213,7 +218,6 @@ ROLES = [
             ("Senior Software Development Engineer; led a six-engineer ASR core team responsible for foundational engine functionality, legacy support, new core libraries, and migration of 10+ teams.", BOTH),
             ("Designed and implemented a configurable C++ data-processing framework adopted by 11 Alexa engines from tiny single-core devices to multi-core cloud machines, improving onboarding and time to production by 4-5x.", BOTH),
             ("Drove modularization of a monolith with 60+ libraries, 50+ binaries, less than 40% coverage, and 50+ annual contributors; achieved 95%+ coverage on decoupled modules with clearer dependencies and reduced blast radius.", BOTH),
-            ("Created documentation, templates, release patterns, and migration paths that improved usability, cross-team adoption, and framework scalability across the Alexa ecosystem.", (GENERAL,)),
             ("Reduced idea-to-production time for a new ASR engine from 4-6 months to 3-4 weeks, simplified monitoring and debugging, led root-cause analysis for complex distributed failures, and drove security certification for 30+ components.", BOTH),
         ],
     ),
@@ -223,7 +227,6 @@ ROLES = [
             ("Software Development Engineer; added the first DNN-model support to Alexa TTS and released seven engine versions, including one used for the Amazon Polly launch.", BOTH),
             ("Led design and implementation of a runtime add-on system that grew from 2 to 140 add-ons over four years and helped resolve critical launch-time runtime issues.", BOTH),
             ("Led TTS runtime-database modularization, reducing coupling and engine footprint while improving scalability across locales and languages.", (GENERAL,)),
-            ("Contributed features and defect fixes to the Kindle Bird\'s Eye View reading experience.", (GENERAL,)),
         ],
     ),
     (
@@ -234,7 +237,6 @@ ROLES = [
             ("Delivered firmware and platform software that shipped to high-volume manufacturing across Samsung MFP product lines, working with production and quality teams through launch.", BOTH),
             ("Managed a remote engineering team, including requirements clarification, time and resource planning, and delivery of Scan to Email through USB, SMB, and FTP, direct-printing, and job-flow capabilities.", BOTH),
             ("Designed multi-partition formatting, file defragmentation, and Immediate and On-Demand Image Overwriting algorithms for Samsung MFP platforms, earning an Excellence Award.", BOTH),
-            ("Built image-transfer pipelines for TIFF, BMP, JPEG, GIF, PNG, and PDF variants, including secure and digitally signed formats.", (GENERAL,)),
         ],
     ),
     (
