@@ -55,7 +55,7 @@ class ResumePdfTests(unittest.TestCase):
             self.assertIn(value, self.normalized_text)
 
     def test_pdf_contains_recent_results(self):
-        for value in ("200+ repositories", "49 Light-device releases", "30 PowerUnit releases", "11 Alexa engines"):
+        for value in ("200+ repositories", "49 Light and 30 PowerUnit releases", "11 Alexa engines"):
             self.assertIn(value, self.normalized_text)
 
     def test_pdf_contains_approved_positioning_and_credentials(self):
@@ -88,6 +88,27 @@ class ResumePdfTests(unittest.TestCase):
             "MapInfo",
         ):
             self.assertIn(value, self.normalized_text)
+
+    def test_pdf_shows_hands_on_firmware_work(self):
+        for value in (
+            "Wrote the complete device firmware from scratch in C and C++",
+            "RTOS threading model, task priorities",
+            "six peripherals on a shared I2C bus",
+            "JTAG/SWD alongside the hardware engineer",
+            "OTA firmware-update path end to end",
+            "high-volume manufacturing",
+            "CAN bus control of motors and actuators",
+        ):
+            self.assertIn(value, self.normalized_text)
+
+    def test_published_pdf_withholds_confidential_material(self):
+        """The general resume is published on a public site; these must never reach it."""
+        for term in (
+            "lithotripsy", "kidney", "Class C to Class B", "QNX hypervisor",
+            "parallel recognition capacity", "50 to 150", "FPGA", "Azure DevOps",
+            "ad hoc", "glass-break", "whisper detection", "9 to 20+",
+        ):
+            self.assertNotIn(term, self.normalized_text, term)
 
     def test_pdf_avoids_non_ascii_dash_characters(self):
         for forbidden in ("–", "—", "‑"):
